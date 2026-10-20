@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghousia Fast Food | Hussainabad Food Street, Karachi</title>
+    <meta name="description" content="Experience bold flavours and Karachi's food street spirit at Ghousia Fast Food, Hussainabad. Famous for Lahori Whole Chicken Chargha, Chicken Malai Boti, Beef Seekh Kebab, Crispy Broast, and Desi BBQ.">
+    <meta name="keywords" content="Ghousia Fast Food, Hussainabad Food Street, Karachi Fast Food, BBQ Karachi, Chicken Chargha Hussainabad, Broast Karachi, Desi BBQ">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Ghousia Fast Food — Bold Flavours. Karachi's Food Street Spirit.">
+    <meta property="og:description" content="Savor sizzling Pakistani BBQ, signature Chicken Chargha, and golden crispy broast in Hussainabad, Federal B Area, Karachi.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://maps.app.goo.gl/UPSKa33mk6VS28JJ7">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0B0B0C',
+                            surface: '#141416',
+                            card: '#1B1B1E',
+                            border: '#2A2A2E',
+                            ivory: '#F5F2EB',
+                            muted: '#A09D96',
+                            chilli: '#D32F2F',
+                            chilliHover: '#B71C1C',
+                            gold: '#D4AF37',
+                            goldLight: '#F3E5AB'
+                        }
+                    },
+                    fontFamily: {
+                        playfair: ['"Playfair Display"', 'serif'],
+                        cormorant: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* Custom scrollbar for dark theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B0B0C;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2A2A2E;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D32F2F;
+        }
+
+        /* Glassmorphism subtle effects */
+        .glass-nav {
+            background: rgba(11, 11, 12, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .glass-card {
+            background: rgba(27, 27, 30, 0.7);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(212, 175, 55, 0.12);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .glass-card:hover {
+            border-color: rgba(212, 175, 55, 0.45);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px -10px rgba(211, 47, 47, 0.25);
+        }
+
+        /* Subtle gold & flame glows */
+        .gold-glow {
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+        }
+        .chilli-glow {
+            box-shadow: 0 4px 25px rgba(211, 47, 47, 0.45);
+        }
+
+        /* Custom image zoom */
+        .img-zoom-container {
+            overflow: hidden;
+        }
+        .img-zoom-container img {
+            transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .img-zoom-container:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Background Pattern */
+        .bg-spice-pattern {
+            background-image: radial-gradient(rgba(212, 175, 55, 0.08) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+
+        /* Flame Pulse Animation for Logo Emblem */
+        @keyframes flamePulse {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(211, 47, 47, 0.5);
+            }
+            50% {
+                transform: scale(1.08);
+                box-shadow: 0 0 22px rgba(212, 175, 55, 0.8);
+            }
+        }
+        .animate-flame {
+            animation: flamePulse 3s ease-in-out infinite;
+        }
+
+        /* Floating Badge Animation */
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float {
+            animation: floatSlow 4s ease-in-out infinite;
+        }
+
+        /* Shimmer effect for buttons */
+        .shimmer-btn {
+            position: relative;
+            overflow: hidden;
+        }
+        .shimmer-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                60deg,
+                transparent,
+                rgba(255, 255, 255, 0.2),
+                transparent
+            );
+            transform: rotate(30deg);
+            transition: transform 0.8s ease;
+        }
+        .shimmer-btn:hover::after {
+            transform: translate(100%, 100%) rotate(30deg);
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-brand-ivory font-sans antialiased selection:bg-brand-chilli selection:text-white overflow-x-hidden">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-brand-surface border-b border-brand-border text-xs py-2 px-4 text-center text-brand-muted flex items-center justify-center gap-2 flex-wrap z-50 relative">
+        <span class="inline-flex items-center gap-1 text-emerald-400 font-medium">
+            <i class="fa-solid fa-circle-check text-[10px] animate-pulse"></i> Hussainabad Food Street, Karachi
+        </span>
+        <span class="hidden md:inline">•</span>
+        <span>Google Rating: <strong class="text-brand-ivory">4.2 ★</strong> (3,538+ Verified Reviews)</span>
+        <span class="hidden md:inline">•</span>
+        <span class="text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded text-[11px] font-semibold border border-brand-gold/20 flex items-center gap-1">
+            <i class="fa-solid fa-shield-halved"></i> Official Client Pitch Presentation
+        </span>
+    </div>
+
+    <!-- MAIN NAVIGATION -->
+    <header class="sticky top-0 z-50 glass-nav border-b border-brand-border transition-all duration-300" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- BRAND LOGO & EMBLEM -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="h-14 flex items-center">
+                    <img src="logo.png"
+                         alt="Ghousia Fast Food Official Logo" 
+                         class="h-12 w-auto object-contain transition-transform group-hover:scale-105 duration-300 drop-shadow-[0_2px_8px_rgba(212,175,55,0.3)]">
+                </div>
+            </a>
+
+            <!-- DESKTOP NAVIGATION LINKS -->
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+                <a href="#hero" class="text-brand-ivory hover:text-brand-gold transition-colors py-1 hover:scale-105 transform inline-block">Home</a>
+                <a href="#signature" class="text-brand-muted hover:text-brand-ivory transition-colors py-1 hover:scale-105 transform inline-block">Signatures</a>
+                <a href="#menu" class="text-brand-muted hover:text-brand-ivory transition-colors py-1 hover:scale-105 transform inline-block">Menu</a>
+                <a href="#about" class="text-brand-muted hover:text-brand-ivory transition-colors py-1 hover:scale-105 transform inline-block">Our Story</a>
+                <a href="#gallery" class="text-brand-muted hover:text-brand-ivory transition-colors py-1 hover:scale-105 transform inline-block">Gallery</a>
+                <a href="#location" class="text-brand-muted hover:text-brand-ivory transition-colors py-1 hover:scale-105 transform inline-block">Visit Us</a>
+            </nav>
+
+            <!-- RIGHT CTA BUTTONS -->
+            <div class="hidden sm:flex items-center space-x-4">
+                <button onclick="toggleInquiryModal()" class="shimmer-btn text-xs tracking-wider uppercase font-semibold text-brand-gold border border-brand-gold/40 hover:bg-brand-gold/10 px-4 py-2.5 rounded-md transition-all flex items-center gap-2 hover:border-brand-gold">
+                    <i class="fa-solid fa-utensils"></i>
+                    <span>Inquire Order</span>
+                    <span id="cartBadge" class="hidden bg-brand-chilli text-white text-[10px] w-5 h-5 rounded-full items-center justify-center font-bold animate-bounce">0</span>
+                </button>
+                <a href="https://maps.app.goo.gl/UPSKa33mk6VS28JJ7" target="_blank" rel="noopener" class="shimmer-btn bg-brand-chilli hover:bg-brand-chilliHover text-white text-xs tracking-wider uppercase font-semibold px-5 py-2.5 rounded-md transition-all shadow-lg hover:shadow-red-900/50 flex items-center gap-2">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Directions</span>
+                </a>
+            </div>
+
+            <!-- MOBILE MENU TOGGLE -->
+            <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="lg:hidden p-2 text-brand-ivory hover:text-brand-gold focus:outline-none transition-transform duration-300" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
+            </button>
+        </div>
+
+        <!-- MOBILE NAVIGATION DROPDOWN -->
+        <div id="mobileMenu" class="hidden lg:hidden border-b border-brand-border bg-brand-surface px-6 py-6 space-y-4 transition-all duration-300">
+            <a href="#hero" onclick="toggleMobileMenu()" class="block text-brand-ivory font-medium hover:text-brand-gold">Home</a>
+            <a href="#signature" onclick="toggleMobileMenu()" class="block text-brand-muted hover:text-brand-ivory">Signatures</a>
+            <a href="#menu" onclick="toggleMobileMenu()" class="block text-brand-muted hover:text-brand-ivory">Menu</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="block text-brand-muted hover:text-brand-ivory">Our Story</a>
+            <a href="#gallery" onclick="toggleMobileMenu()" class="block text-brand-muted hover:text-brand-ivory">Gallery</a>
+            <a href="#location" onclick="toggleMobileMenu()" class="block text-brand-muted hover:text-brand-ivory">Visit Us</a>
+            
+            <div class="pt-4 border-t border-brand-border/60 flex flex-col gap-3">
+                <button onclick="toggleMobileMenu(); toggleInquiryModal();" class="w-full text-center py-2.5 rounded text-xs font-semibold uppercase tracking-wider border border-brand-gold text-brand-gold">
+                    <i class="fa-solid fa-utensils mr-2"></i> Inquire Order
+                </button>
+                <a href="https://maps.app.goo.gl/UPSKa33mk6VS28JJ7" target="_blank" class="w-full text-center py-2.5 rounded text-xs font-semibold uppercase tracking-wider bg-brand-chilli text-white">
+                    <i class="fa-solid fa-location-dot mr-2"></i> Open in Google Maps
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO EXPERIENCE WITH PARTICLE EMBERS CANVAS -->
+    <section id="hero" class="relative min-h-[calc(100vh-5rem)] flex items-center bg-brand-dark overflow-hidden py-12 lg:py-0">
+        <!-- Interactive Ember Canvas Background -->
+        <canvas id="emberCanvas" class="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-60"></canvas>
+
+        <!-- Ambient Lighting Glows -->
+        <div class="absolute top-1/4 left-10 w-96 h-96 bg-brand-chilli/15 rounded-full blur-3xl pointer-events-none animate-pulse"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-brand-gold/15 rounded-full blur-3xl pointer-events-none animate-pulse" style="animation-duration: 6s;"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 lg:py-16 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Left Editorial Text Content -->
+                <div class="lg:col-span-7 space-y-6" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-card border border-brand-gold/30 text-xs font-semibold text-brand-gold tracking-widest uppercase">
+                        <span class="w-2 h-2 rounded-full bg-brand-chilli animate-ping"></span>
+                        HUSSAINABAD, FEDERAL B AREA • KARACHI
+                    </div>
+
+                    <h1 class="font-playfair text-4xl sm:text-5xl lg:text-6xl font-bold text-brand-ivory leading-[1.15] tracking-tight">
+                        Bold Flavours. <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold via-amber-200 to-brand-gold gold-glow">Karachi’s Food Street</span> Spirit.
+                    </h1>
+
+                    <p class="text-brand-muted text-base sm:text-lg max-w-2xl font-light leading-relaxed">
+                        Discover the authentic taste of sizzled desi BBQ, iconic Lahori whole chicken chargha, crispy broast, and satisfying fast food served hot in the heart of Hussainabad.
+                    </p>
+
+                    <!-- CTA Group -->
+                    <div class="pt-4 flex flex-wrap items-center gap-4">
+                        <a href="#menu" class="shimmer-btn bg-brand-chilli hover:bg-brand-chilliHover text-white text-sm uppercase tracking-widest font-semibold px-8 py-4 rounded-md transition-all shadow-lg hover:shadow-red-900/50 flex items-center gap-3 hover:translate-x-1">
+                            <span>Explore Our Menu</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+
+                        <a href="https://maps.app.goo.gl/UPSKa33mk6VS28JJ7" target="_blank" rel="noopener" class="border border-brand-border hover:border-brand-gold text-brand-ivory hover:text-brand-gold text-sm uppercase tracking-widest font-semibold px-7 py-4 rounded-md transition-all bg-brand-surface/50 backdrop-blur-sm flex items-center gap-2 hover:bg-brand-surface">
+                            <i class="fa-solid fa-compass text-brand-gold animate-spin" style="animation-duration: 10s;"></i>
+                            <span>Get Directions</span>
+                        </a>
+                    </div>
+
+                    <!-- Verified Highlights Bar -->
+                    <div class="pt-8 grid grid-cols-3 gap-4 border-t border-brand-border/80 text-left">
+                        <div data-aos="fade-up" data-aos-delay="200">
+                            <div class="font-playfair text-2xl lg:text-3xl font-bold text-brand-gold">4.2 ★</div>
+                            <div class="text-xs text-brand-muted">Google Rating</div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-delay="300">
+                            <div class="font-playfair text-2xl lg:text-3xl font-bold text-brand-ivory">3,500+</div>
+                            <div class="text-xs text-brand-muted">Verified Reviews</div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-delay="400">
+                            <div class="font-playfair text-2xl lg:text-3xl font-bold text-brand-gold">Late Night</div>
+                            <div class="text-xs text-brand-muted">Hussainabad Dining</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Hero Image Composition with Hover & AOS effects -->
+                <div class="lg:col-span-5 relative" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        
+                        <!-- Main Hero Image Frame -->
+                        <div class="relative rounded-2xl overflow-hidden border border-brand-gold/30 shadow-2xl bg-brand-card img-zoom-container aspect-[4/5] hover:border-brand-gold transition-all duration-500">
+                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=900" 
+                                 alt="Pakistani Sizzling BBQ Tikka and Chargha at Ghousia Fast Food" 
+                                 class="w-full h-full object-cover"
+                                 loading="eager">
+                            <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-80"></div>
+                            
+                            <!-- Overlay Content on Image -->
+                            <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl glass-card">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <p class="text-xs text-brand-gold font-semibold uppercase tracking-wider">Hussainabad Speciality</p>
+                                        <p class="font-playfair text-lg font-bold text-brand-ivory">Whole Steamed & Fried Chargha</p>
+                                    </div>
+                                    <span class="bg-brand-chilli/90 text-white text-xs px-2.5 py-1 rounded font-semibold animate-pulse">Fresh BBQ</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Badge 1: Fresh Spices -->
+                        <div class="absolute -top-4 -left-4 bg-brand-surface border border-brand-gold/30 p-3 rounded-xl shadow-xl animate-float hidden sm:flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-brand-chilli/20 text-brand-chilli flex items-center justify-center font-bold text-lg">
+                                <i class="fa-solid fa-pepper-hot"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-brand-muted uppercase tracking-wider">Authentic Spice</p>
+                                <p class="text-sm font-semibold text-brand-ivory">Karachi Recipe</p>
+                            </div>
+                        </div>
+
+                        <!-- Floating Badge 2: Google Review Quote -->
+                        <div class="absolute -bottom-6 -right-4 bg-brand-surface border border-brand-border p-4 rounded-xl shadow-xl max-w-xs hidden sm:block">
+                            <div class="flex items-center gap-1 text-amber-400 text-xs mb-1">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-xs text-brand-ivory italic">“Best place in Hussainabad for chargha and broast!”</p>
+                            <span class="text-[10px] text-brand-muted block mt-1">— Google Maps Reviewer</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Scroll Down Cue -->
+        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 opacity-60 hover:opacity-100 transition-opacity">
+            <span class="text-[10px] tracking-widest uppercase text-brand-muted">Scroll to discover</span>
+            <div class="w-5 h-9 rounded-full border border-brand-muted flex items-start justify-center p-1">
+                <div class="w-1 h-2 bg-brand-gold rounded-full animate-bounce"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIGNATURE FAVOURITES -->
+    <section id="signature" class="py-20 bg-brand-surface border-t border-brand-border relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-xs text-brand-gold tracking-[0.3em] font-semibold uppercase">Crafted With Spice & Tradition</span>
+                <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-brand-ivory mt-2">Signature Food Street Favourites</h2>
+                <div class="w-16 h-0.5 bg-brand-chilli mx-auto my-4"></div>
+                <p class="text-brand-muted text-sm sm:text-base">
+                    Every dish is prepared using freshly marinated meats, traditional flame grilling techniques, and iconic Pakistani spice blends.
+                </p>
+            </div>
+
+            <!-- Grid of Signatures with AOS stagger -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Signature 1: Chargha -->
+                <div class="glass-card rounded-2xl overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-64 overflow-hidden img-zoom-container">
+                        <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&q=80&w=800" 
+                             alt="Pakistani Chicken Chargha" 
+                             class="w-full h-full object-cover">
+                        <span class="absolute top-4 right-4 bg-brand-chilli text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md animate-pulse">
+                            Top Seller
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-playfair text-xl font-bold text-brand-ivory group-hover:text-brand-gold transition-colors">
+                                Whole Lahori Chargha
+                            </h3>
+                        </div>
+                        <p class="text-brand-muted text-sm mb-4 leading-relaxed">
+                            Whole chicken marinated in traditional Lahori spices, steamed to tender perfection, and golden deep-fried. Served with fresh salad, raita, and naan.
+                        </p>
+                        <div class="pt-4 border-t border-brand-border flex items-center justify-between">
+                            <span class="text-xs text-brand-gold font-medium">Pending Price Confirmation</span>
+                            <button onclick="addInquiryItem('Whole Lahori Chargha')" class="text-xs font-semibold uppercase text-brand-ivory hover:text-brand-chilli flex items-center gap-1 transition-all hover:translate-x-1">
+                                Add To Order <i class="fa-solid fa-plus text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Signature 2: Chicken Malai Boti -->
+                <div class="glass-card rounded-2xl overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-64 overflow-hidden img-zoom-container">
+                        <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&q=80&w=800" 
+                             alt="Chicken Malai Boti BBQ" 
+                             class="w-full h-full object-cover">
+                        <span class="absolute top-4 right-4 bg-brand-gold text-brand-dark text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
+                            Flame Grilled
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-playfair text-xl font-bold text-brand-ivory group-hover:text-brand-gold transition-colors">
+                                Creamy Malai Boti
+                            </h3>
+                        </div>
+                        <p class="text-brand-muted text-sm mb-4 leading-relaxed">
+                            Melt-in-your-mouth chicken skewers marinated in fresh cream, green chillies, white pepper, and aromatic cardamom over charcoal.
+                        </p>
+                        <div class="pt-4 border-t border-brand-border flex items-center justify-between">
+                            <span class="text-xs text-brand-gold font-medium">Pending Price Confirmation</span>
+                            <button onclick="addInquiryItem('Creamy Malai Boti')" class="text-xs font-semibold uppercase text-brand-ivory hover:text-brand-chilli flex items-center gap-1 transition-all hover:translate-x-1">
+                                Add To Order <i class="fa-solid fa-plus text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Signature 3: Golden Crispy Broast -->
+                <div class="glass-card rounded-2xl overflow-hidden group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative h-64 overflow-hidden img-zoom-container">
+                        <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?auto=format&fit=crop&q=80&w=800" 
+                             alt="Crispy Fried Chicken Broast" 
+                             class="w-full h-full object-cover">
+                        <span class="absolute top-4 right-4 bg-brand-chilli text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">
+                            Karachi Favorite
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-playfair text-xl font-bold text-brand-ivory group-hover:text-brand-gold transition-colors">
+                                Crispy Chicken Broast
+                            </h3>
+                        </div>
+                        <p class="text-brand-muted text-sm mb-4 leading-relaxed">
+                            Ultra-crispy double-crusted fried chicken with signature garlic sauce, crinkle fries, and freshly baked dinner rolls.
+                        </p>
+                        <div class="pt-4 border-t border-brand-border flex items-center justify-between">
+                            <span class="text-xs text-brand-gold font-medium">Pending Price Confirmation</span>
+                            <button onclick="addInquiryItem('Crispy Chicken Broast')" class="text-xs font-semibold uppercase text-brand-ivory hover:text-brand-chilli flex items-center gap-1 transition-all hover:translate-x-1">
+                                Add To Order <i class="fa-solid fa-plus text-[10px]"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE MENU SECTION -->
+    <section id="menu" class="py-20 bg-brand-dark relative bg-spice-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6" data-aos="fade-up">
+                <div>
+                    <span class="text-xs text-brand-gold tracking-[0.3em] font-semibold uppercase">Explore Offerings</span>
+                    <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-brand-ivory mt-2">Food Street Menu</h2>
+                </div>
+                
+                <!-- Notice Badge for Pending Verified Prices -->
+                <div class="bg-brand-card/80 border border-brand-gold/30 rounded-lg p-3 text-xs text-brand-muted max-w-md flex items-center gap-3">
+                    <i class="fa-solid fa-circle-info text-brand-gold text-lg shrink-0"></i>
+                    <span>Items represent verified restaurant offerings. Exact prices will be finalized upon owner verification.</span>
+                </div>
+            </div>
+
+            <!-- Category Filter Tabs -->
+            <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 border-b border-brand-border scrollbar-none" id="categoryTabs" data-aos="fade-up" data-aos-delay="100">
+                <button onclick="filterCategory('all')" class="category-btn active px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider whitespace-nowrap transition-all bg-brand-chilli text-white shadow-md hover:scale-105">
+                    All Categories
+                </button>
+                <button onclick="filterCategory('bbq')" class="category-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider whitespace-nowrap transition-all bg-brand-card text-brand-muted hover:text-brand-ivory hover:bg-brand-border hover:scale-105">
+                    🔥 Desi BBQ & Tikka
+                </button>
+                <button onclick="filterCategory('chargha')" class="category-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider whitespace-nowrap transition-all bg-brand-card text-brand-muted hover:text-brand-ivory hover:bg-brand-border hover:scale-105">
+                    🍗 Chargha Specials
+                </button>
+                <button onclick="filterCategory('broast')" class="category-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider whitespace-nowrap transition-all bg-brand-card text-brand-muted hover:text-brand-ivory hover:bg-brand-border hover:scale-105">
+                    🍟 Broast & Fast Food
+                </button>
+                <button onclick="filterCategory('burgers')" class="category-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider whitespace-nowrap transition-all bg-brand-card text-brand-muted hover:text-brand-ivory hover:bg-brand-border hover:scale-105">
+                    🍔 Burgers & Rolls
+                </button>
+                <button onclick="filterCategory('sides')" class="category-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider whitespace-nowrap transition-all bg-brand-card text-brand-muted hover:text-brand-ivory hover:bg-brand-border hover:scale-105">
+                    🫓 Naan & Chutneys
+                </button>
+            </div>
+
+            <!-- Menu Search Input -->
+            <div class="mb-8 relative max-w-md" data-aos="fade-up" data-aos-delay="200">
+                <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-brand-muted text-sm"></i>
+                <input type="text" id="menuSearch" oninput="searchMenu()" placeholder="Search menu items (e.g., Chargha, Seekh Kebab, Broast)..." 
+                       class="w-full bg-brand-card border border-brand-border rounded-lg pl-11 pr-4 py-3 text-sm text-brand-ivory placeholder-brand-muted focus:outline-none focus:border-brand-gold transition-colors">
+            </div>
+
+            <!-- Menu Items Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 transition-all duration-500" id="menuGrid">
+                <!-- Javascript will populate interactive menu items here dynamically -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- STORY & BRAND HERITAGE -->
+    <section id="about" class="py-20 bg-brand-surface border-t border-b border-brand-border relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Story Visual Composition -->
+                <div class="lg:col-span-5 relative" data-aos="zoom-in-right" data-aos-duration="1000">
+                    <div class="relative rounded-2xl overflow-hidden border border-brand-gold/20 shadow-2xl img-zoom-container">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=800" 
+                             alt="Busy Food Street Atmosphere Karachi" 
+                             class="w-full h-auto object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-transparent opacity-60"></div>
+                    </div>
+                    <!-- Decorative Badge -->
+                    <div class="absolute -bottom-6 -left-6 bg-brand-card border border-brand-gold/40 p-5 rounded-2xl hidden sm:block max-w-xs shadow-2xl animate-float">
+                        <p class="font-playfair text-xl font-bold text-brand-gold">Hussainabad Food Street</p>
+                        <p class="text-xs text-brand-muted mt-1">Karachi's premier late-night dining hub in Federal B Area.</p>
+                    </div>
+                </div>
+
+                <!-- Story Text Content -->
+                <div class="lg:col-span-7 space-y-6" data-aos="fade-left" data-aos-duration="1000">
+                    <span class="text-xs text-brand-gold tracking-[0.3em] font-semibold uppercase">Rooted in Hussainabad</span>
+                    <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-brand-ivory">
+                        The Heart of Karachi’s Late-Night Dining
+                    </h2>
+                    <div class="w-16 h-0.5 bg-brand-chilli"></div>
+                    
+                    <p class="text-brand-muted text-base leading-relaxed">
+                        Located at <strong class="text-brand-ivory">W385+7HH, Federal B Area, Hussainabad Block 3</strong>, Ghousia Fast Food is a cornerstone of one of Karachi's most celebrated food streets. 
+                    </p>
+                    
+                    <p class="text-brand-muted text-base leading-relaxed">
+                        Renowned for high-fire charcoal grilling, aromatic spices, and signature Whole Steamed & Fried Chicken Chargha, we bring families and food lovers together for unforgettable nighttime feasts.
+                    </p>
+
+                    <!-- Fact Check / Transparent Disclaimer Badge -->
+                    <div class="p-4 rounded-xl bg-brand-card/60 border border-brand-border space-y-2">
+                        <div class="flex items-center gap-2 text-xs font-semibold text-brand-gold uppercase tracking-wider">
+                            <i class="fa-solid fa-circle-check text-emerald-400"></i> Verified Business Details
+                        </div>
+                        <ul class="text-xs text-brand-muted space-y-1 list-disc list-inside">
+                            <li>Address: Federal B Area, Hussainabad Block 3, Gulberg Town, Karachi</li>
+                            <li>Phone: +92 300 9202325</li>
+                            <li>Google Maps Rating: ~4.2 Stars (3,500+ Community Reviews)</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery" class="py-20 bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-xs text-brand-gold tracking-[0.3em] font-semibold uppercase">Visual Feast</span>
+                <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-brand-ivory mt-2">Food Street Gallery</h2>
+                <div class="w-16 h-0.5 bg-brand-chilli mx-auto my-4"></div>
+                <p class="text-brand-muted text-sm">Click any photo to open in full-screen view.</p>
+            </div>
+
+            <!-- Responsive Gallery Grid with Staggered AOS Animations -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Photo 1 -->
+                <div class="relative rounded-xl overflow-hidden cursor-pointer group glass-card img-zoom-container aspect-[4/3]"
+                     data-aos="zoom-in" data-aos-delay="100"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1200', 'Sizzling Charcoal BBQ Tikka')">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=600" 
+                         alt="Sizzling Charcoal BBQ Tikka" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-xs font-semibold text-brand-ivory"><i class="fa-solid fa-expand mr-2 text-brand-gold"></i>Sizzling Charcoal BBQ Tikka</p>
+                    </div>
+                </div>
+
+                <!-- Photo 2 -->
+                <div class="relative rounded-xl overflow-hidden cursor-pointer group glass-card img-zoom-container aspect-[4/3]"
+                     data-aos="zoom-in" data-aos-delay="200"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&q=80&w=1200', 'Whole Steamed & Fried Chargha')">
+                    <img src="https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&q=80&w=600" 
+                         alt="Whole Steamed & Fried Chargha" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-xs font-semibold text-brand-ivory"><i class="fa-solid fa-expand mr-2 text-brand-gold"></i>Whole Steamed & Fried Chargha</p>
+                    </div>
+                </div>
+
+                <!-- Photo 3 -->
+                <div class="relative rounded-xl overflow-hidden cursor-pointer group glass-card img-zoom-container aspect-[4/3]"
+                     data-aos="zoom-in" data-aos-delay="300"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&q=80&w=1200', 'Chicken Seekh Kebabs & Chutney')">
+                    <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&q=80&w=600" 
+                         alt="Chicken Seekh Kebabs & Chutney" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-xs font-semibold text-brand-ivory"><i class="fa-solid fa-expand mr-2 text-brand-gold"></i>Chicken Seekh Kebabs & Chutney</p>
+                    </div>
+                </div>
+
+                <!-- Photo 4 -->
+                <div class="relative rounded-xl overflow-hidden cursor-pointer group glass-card img-zoom-container aspect-[4/3]"
+                     data-aos="zoom-in" data-aos-delay="100"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?auto=format&fit=crop&q=80&w=1200', 'Golden Crispy Broast Portion')">
+                    <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?auto=format&fit=crop&q=80&w=600" 
+                         alt="Golden Crispy Broast Portion" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-xs font-semibold text-brand-ivory"><i class="fa-solid fa-expand mr-2 text-brand-gold"></i>Golden Crispy Broast Portion</p>
+                    </div>
+                </div>
+
+                <!-- Photo 5 -->
+                <div class="relative rounded-xl overflow-hidden cursor-pointer group glass-card img-zoom-container aspect-[4/3]"
+                     data-aos="zoom-in" data-aos-delay="200"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=1200', 'Desi Spicy Zinger Burger')">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80&w=600" 
+                         alt="Desi Spicy Zinger Burger" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-xs font-semibold text-brand-ivory"><i class="fa-solid fa-expand mr-2 text-brand-gold"></i>Desi Spicy Zinger Burger</p>
+                    </div>
+                </div>
+
+                <!-- Photo 6 -->
+                <div class="relative rounded-xl overflow-hidden cursor-pointer group glass-card img-zoom-container aspect-[4/3]"
+                     data-aos="zoom-in" data-aos-delay="300"
+                     onclick="openLightbox('https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&q=80&w=1200', 'Fresh Naan & Mint Raita Dip')">
+                    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&q=80&w=600" 
+                         alt="Fresh Naan & Mint Raita Dip" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                        <p class="text-xs font-semibold text-brand-ivory"><i class="fa-solid fa-expand mr-2 text-brand-gold"></i>Fresh Naan & Mint Raita Dip</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CUSTOMER FEEDBACK SECTION -->
+    <section class="py-20 bg-brand-surface border-t border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <span class="text-xs text-brand-gold tracking-[0.3em] font-semibold uppercase">Google Review Highlights</span>
+                <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-brand-ivory mt-2">Loved by Karachi Foodies</h2>
+                <div class="w-16 h-0.5 bg-brand-chilli mx-auto my-4"></div>
+                <p class="text-brand-muted text-sm">Authentic sentiment reflecting over 3,500 public reviews on Google Maps.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Review 1 -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                    <div>
+                        <div class="flex text-amber-400 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-sm text-brand-ivory italic leading-relaxed">
+                            “The chargha at Ghousia is always cooked to perfection—tender inside and properly spiced outside. Perfect late night spot in Hussainabad.”
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-brand-border/60 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-brand-gold">Verified Diner</span>
+                        <span class="text-[10px] text-brand-muted">Google Maps Review</span>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                    <div>
+                        <div class="flex text-amber-400 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-sm text-brand-ivory italic leading-relaxed">
+                            “Awesome BBQ malai boti and crispy broast. Fast service even during peak weekend rush hours on food street.”
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-brand-border/60 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-brand-gold">Local Guide</span>
+                        <span class="text-[10px] text-brand-muted">Google Maps Review</span>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
+                    <div>
+                        <div class="flex text-amber-400 text-xs mb-3">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-sm text-brand-ivory italic leading-relaxed">
+                            “Great value for money. If you are visiting Hussainabad Food Street, Ghousia’s broast and tikka are must-haves.”
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-brand-border/60 flex items-center justify-between">
+                        <span class="text-xs font-semibold text-brand-gold">Karachi Resident</span>
+                        <span class="text-[10px] text-brand-muted">Google Maps Review</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- VISIT US & CONTACT SECTION -->
+    <section id="location" class="py-20 bg-brand-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Contact & Info Panel -->
+                <div class="lg:col-span-5 space-y-6" data-aos="fade-right">
+                    <span class="text-xs text-brand-gold tracking-[0.3em] font-semibold uppercase">Location & Directions</span>
+                    <h2 class="font-playfair text-3xl sm:text-4xl font-bold text-brand-ivory">Visit Ghousia Fast Food</h2>
+                    <div class="w-16 h-0.5 bg-brand-chilli"></div>
+
+                    <div class="space-y-4 pt-2">
+                        <!-- Address -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-brand-card border border-brand-gold/30 flex items-center justify-center text-brand-gold shrink-0 mt-1">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-brand-ivory">Address</h4>
+                                <p class="text-xs text-brand-muted mt-0.5 leading-relaxed">
+                                    W385+7HH, Federal B Area, Hussainabad Block 3, Gulberg Town, Karachi, Sindh, Pakistan
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-brand-card border border-brand-gold/30 flex items-center justify-center text-brand-gold shrink-0 mt-1">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-brand-ivory">Phone Listing</h4>
+                                <p class="text-xs text-brand-muted mt-0.5">+92 300 9202325</p>
+                                <span class="text-[10px] text-amber-400/80">Pending owner WhatsApp capability confirmation</span>
+                            </div>
+                        </div>
+
+                        <!-- Hours -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-brand-card border border-brand-gold/30 flex items-center justify-center text-brand-gold shrink-0 mt-1">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-semibold text-brand-ivory">Opening Hours</h4>
+                                <p class="text-xs text-brand-muted mt-0.5">Evening to Late Night (Food Street Hours)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct Google Maps CTA -->
+                    <div class="pt-4 flex flex-col sm:flex-row gap-4">
+                        <a href="https://maps.app.goo.gl/UPSKa33mk6VS28JJ7" target="_blank" rel="noopener" 
+                           class="shimmer-btn w-full sm:w-auto text-center bg-brand-chilli hover:bg-brand-chilliHover text-white text-xs font-semibold uppercase tracking-wider px-6 py-3.5 rounded-md transition-all shadow-lg flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-map-location-dot"></i> Open Directions in Google Maps
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed Simulation Frame -->
+                <div class="lg:col-span-7" data-aos="fade-left">
+                    <div class="rounded-2xl overflow-hidden border border-brand-gold/20 shadow-2xl bg-brand-card h-96 relative flex flex-col justify-between p-6 bg-cover bg-center" style="background-image: linear-gradient(to bottom, rgba(11,11,12,0.7), rgba(11,11,12,0.9)), url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=1000');">
+                        <div class="flex items-center justify-between">
+                            <div class="bg-brand-dark/90 border border-brand-gold/30 px-3 py-1.5 rounded text-xs font-semibold text-brand-gold flex items-center gap-2">
+                                <i class="fa-solid fa-map-pin animate-bounce"></i> Hussainabad Block 3
+                            </div>
+                            <span class="text-xs text-brand-muted bg-brand-dark/80 px-2.5 py-1 rounded">Google Maps Listing Ref</span>
+                        </div>
+
+                        <div class="space-y-3 max-w-md">
+                            <h3 class="font-playfair text-2xl font-bold text-brand-ivory">Ghousia Fast Food</h3>
+                            <p class="text-xs text-brand-muted">Federal B Area, Hussainabad Block 3, Gulberg Town, Karachi</p>
+                            <a href="https://maps.app.goo.gl/UPSKa33mk6VS28JJ7" target="_blank" class="inline-flex items-center gap-2 text-xs font-bold text-brand-gold hover:underline">
+                                Launch Interactive Map Navigation <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ORDER INQUIRY MODAL -->
+    <div id="inquiryModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 transition-all duration-300">
+        <div class="bg-brand-surface border border-brand-gold/30 rounded-2xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl max-h-[90vh] overflow-y-auto transform scale-95 transition-transform" id="inquiryModalContent">
+            
+            <button onclick="toggleInquiryModal()" class="absolute top-4 right-4 text-brand-muted hover:text-brand-ivory text-lg transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h3 class="font-playfair text-2xl font-bold text-brand-ivory mb-1">Inquire About An Order</h3>
+            <p class="text-xs text-brand-muted mb-6">Select items or send a direct inquiry to Ghousia Fast Food.</p>
+
+            <!-- Selected Items List -->
+            <div class="mb-6">
+                <h4 class="text-xs font-semibold uppercase text-brand-gold tracking-wider mb-2">Selected Items</h4>
+                <div id="selectedItemsContainer" class="min-h-[60px] bg-brand-card p-3 rounded-lg border border-brand-border text-xs text-brand-muted flex flex-col gap-2">
+                    <p class="italic text-center py-2">No items selected yet. Click "Add To Order" on menu items.</p>
+                </div>
+            </div>
+
+            <!-- Pre-filled Message Form -->
+            <form onsubmit="handleInquirySubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-medium text-brand-ivory mb-1">Your Name</label>
+                    <input type="text" id="custName" required placeholder="Enter your full name" class="w-full bg-brand-card border border-brand-border rounded-lg px-3 py-2 text-xs text-brand-ivory focus:outline-none focus:border-brand-gold">
+                </div>
+                
+                <div>
+                    <label class="block text-xs font-medium text-brand-ivory mb-1">Dine-in or Takeaway Notes</label>
+                    <textarea id="custNotes" rows="3" placeholder="Specify special spice instructions or takeaway time..." class="w-full bg-brand-card border border-brand-border rounded-lg px-3 py-2 text-xs text-brand-ivory focus:outline-none focus:border-brand-gold"></textarea>
+                </div>
+
+                <div class="p-3 bg-amber-500/10 border border-amber-500/30 rounded-lg text-[11px] text-amber-200">
+                    <i class="fa-solid fa-circle-exclamation mr-1"></i>
+                    <strong>Notice:</strong> This prepares a pre-filled message for order inquiry. Final order confirmation depends on restaurant staff response.
+                </div>
+
+                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs uppercase tracking-wider py-3 rounded-lg transition-colors flex items-center justify-center gap-2 shadow-lg">
+                    <i class="fa-brands fa-whatsapp text-sm"></i> Send Inquiry via WhatsApp (+92 300 9202325)
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightboxModal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4 transition-opacity duration-300" onclick="closeLightbox()">
+        <div class="relative max-w-4xl max-h-[90vh] text-center" onclick="event.stopPropagation()">
+            <button onclick="closeLightbox()" class="absolute -top-10 right-0 text-white text-2xl hover:text-brand-gold transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <img id="lightboxImg" src="" alt="Full screen food photography" class="max-h-[80vh] w-auto mx-auto rounded-lg shadow-2xl">
+            <p id="lightboxCaption" class="text-brand-ivory text-sm mt-3 font-medium"></p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark border-t border-brand-border py-12 text-xs text-brand-muted">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                
+                <div class="flex items-center gap-3">
+                    <img src="logo.png"
+                         alt="Ghousia Fast Food Logo" 
+                         class="h-10 w-auto object-contain">
+                    <div>
+                        <span class="font-playfair font-bold text-brand-ivory text-sm">GHOUSIA FAST FOOD</span>
+                        <p class="text-[10px]">Federal B Area, Hussainabad Block 3, Gulberg Town, Karachi</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center space-x-6 text-brand-muted text-xs">
+                    <a href="#hero" class="hover:text-brand-gold transition-colors">Home</a>
+                    <a href="#menu" class="hover:text-brand-gold transition-colors">Menu</a>
+                    <a href="#location" class="hover:text-brand-gold transition-colors">Directions</a>
+                    <a href="https://maps.app.goo.gl/UPSKa33mk6VS28JJ7" target="_blank" class="hover:text-brand-gold transition-colors">Google Maps Profile</a>
+                </div>
+
+                <div class="text-center md:text-right text-[11px]">
+                    <p>© 2026 Ghousia Fast Food. Client Pitch Presentation Build.</p>
+                    <p class="text-brand-gold/70 mt-0.5">Designed specifically for Hussainabad Food Street, Karachi.</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Library JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // MENU DATA STORAGE
+        const menuItems = [
+            { id: 'm1', name: 'Whole Lahori Chargha', category: 'chargha', desc: 'Whole chicken marinated in traditional spices, steamed & deep fried.', tag: 'Signature' },
+            { id: 'm2', name: 'Half Lahori Chargha', category: 'chargha', desc: 'Half chicken marinated in Lahori spices with raita & chutney.', tag: 'Popular' },
+            { id: 'm3', name: 'Chicken Malai Boti (Plate)', category: 'bbq', desc: 'Charcoal grilled chicken boti in cream and mild white pepper marinade.', tag: 'BBQ' },
+            { id: 'm4', name: 'Chicken Tikka (Chest / Leg)', category: 'bbq', desc: 'Traditional red spicy charcoal tikka piece with salad.', tag: 'Flame Grilled' },
+            { id: 'm5', name: 'Beef Seekh Kebab (4 Pcs)', category: 'bbq', desc: 'Minced beef kebabs mixed with herbs and ground spices over coals.', tag: 'Classic' },
+            { id: 'm6', name: 'Chicken Broast (Quarter)', category: 'broast', desc: '2 Pcs crunchy deep fried chicken with crinkle fries and garlic sauce.', tag: 'Crispy' },
+            { id: 'm7', name: 'Chicken Broast (Half)', category: 'broast', desc: '4 Pcs crunchy deep fried chicken with fries and dinner roll.', tag: 'Value' },
+            { id: 'm8', name: 'Crispy Zinger Burger', category: 'burgers', desc: 'Crispy fried chicken breast fillet with lettuce and mayo in sesame bun.', tag: 'Fast Food' },
+            { id: 'm9', name: 'Chicken BBQ Roll', category: 'burgers', desc: 'Charcoal tikka chunks rolled in crispy paratha with spicy green chutney.', tag: 'Street Food' },
+            { id: 'm10', name: 'Garlic Butter Naan', category: 'sides', desc: 'Fresh tandoori naan brushed with garlic and butter.', tag: 'Fresh Tandoor' },
+            { id: 'm11', name: 'Special Garlic Sauce Dip', category: 'sides', desc: 'Signature creamy garlic dip for broast and kebabs.', tag: 'Extra Side' }
+        ];
+
+        let selectedInquiryItems = [];
+
+        // INITIALIZE MENU AND ANIMATIONS ON LOAD
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Scroll Animations
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100
+            });
+
+            // Render Initial Menu
+            renderMenuItems(menuItems);
+
+            // Initialize Ember Particles FX
+            initEmbers();
+        });
+
+        // RENDER MENU GRID WITH FADE-IN
+        function renderMenuItems(items) {
+            const container = document.getElementById('menuGrid');
+            if (!container) return;
+
+            if (items.length === 0) {
+                container.innerHTML = `
+                    <div class="col-span-2 text-center py-12 text-brand-muted">
+                        <i class="fa-solid fa-utensils text-3xl mb-3 text-brand-border"></i>
+                        <p class="text-sm">No dishes found matching your criteria.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = items.map(item => `
+                <div class="glass-card p-5 rounded-xl flex justify-between items-start group hover:border-brand-gold/40 transition-all duration-300">
+                    <div class="space-y-2 max-w-[75%]">
+                        <div class="flex items-center gap-2">
+                            <span class="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-brand-gold/10 text-brand-gold border border-brand-gold/20">
+                                ${item.tag}
+                            </span>
+                        </div>
+                        <h4 class="font-playfair text-lg font-bold text-brand-ivory group-hover:text-brand-gold transition-colors">
+                            ${item.name}
+                        </h4>
+                        <p class="text-xs text-brand-muted leading-relaxed">${item.desc}</p>
+                        <span class="text-[11px] text-brand-gold/80 block italic">Price: Pending Owner Confirmation</span>
+                    </div>
+                    <button onclick="addInquiryItem('${item.name}')" 
+                            class="bg-brand-card hover:bg-brand-chilli hover:text-white border border-brand-border text-brand-ivory text-xs px-3 py-2 rounded-lg transition-all flex items-center gap-1.5 shrink-0 hover:scale-105 active:scale-95">
+                        <span>Add</span>
+                        <i class="fa-solid fa-plus text-[10px]"></i>
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        // CATEGORY FILTERING
+        function filterCategory(cat) {
+            const buttons = document.querySelectorAll('.category-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brand-chilli', 'text-white', 'shadow-md');
+                btn.classList.add('bg-brand-card', 'text-brand-muted');
+            });
+            event.currentTarget.classList.remove('bg-brand-card', 'text-brand-muted');
+            event.currentTarget.classList.add('bg-brand-chilli', 'text-white', 'shadow-md');
+
+            if (cat === 'all') {
+                renderMenuItems(menuItems);
+            } else {
+                const filtered = menuItems.filter(item => item.category === cat);
+                renderMenuItems(filtered);
+            }
+        }
+
+        // SEARCH MENU
+        function searchMenu() {
+            const query = document.getElementById('menuSearch').value.toLowerCase();
+            const filtered = menuItems.filter(item => 
+                item.name.toLowerCase().includes(query) || 
+                item.desc.toLowerCase().includes(query)
+            );
+            renderMenuItems(filtered);
+        }
+
+        // INQUIRY CART FUNCTIONS
+        function addInquiryItem(itemName) {
+            selectedInquiryItems.push(itemName);
+            updateCartBadge();
+            updateInquiryModalList();
+            
+            const badge = document.getElementById('cartBadge');
+            badge.classList.remove('hidden');
+            badge.classList.add('flex');
+        }
+
+        function removeInquiryItem(index) {
+            selectedInquiryItems.splice(index, 1);
+            updateCartBadge();
+            updateInquiryModalList();
+        }
+
+        function updateCartBadge() {
+            const badge = document.getElementById('cartBadge');
+            badge.innerText = selectedInquiryItems.length;
+            if (selectedInquiryItems.length === 0) {
+                badge.classList.add('hidden');
+            } else {
+                badge.classList.remove('hidden');
+                badge.classList.add('flex');
+            }
+        }
+
+        function updateInquiryModalList() {
+            const container = document.getElementById('selectedItemsContainer');
+            if (selectedInquiryItems.length === 0) {
+                container.innerHTML = `<p class="italic text-center py-2">No items selected yet. Click "Add To Order" on menu items.</p>`;
+                return;
+            }
+
+            container.innerHTML = selectedInquiryItems.map((item, idx) => `
+                <div class="flex items-center justify-between bg-brand-surface px-3 py-1.5 rounded border border-brand-border text-brand-ivory">
+                    <span>${item}</span>
+                    <button onclick="removeInquiryItem(${idx})" class="text-brand-chilli hover:text-red-400 transition-colors">
+                        <i class="fa-solid fa-trash-can text-xs"></i>
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        // MODAL TOGGLES WITH ANIMATIONS
+        function toggleInquiryModal() {
+            const modal = document.getElementById('inquiryModal');
+            const modalContent = document.getElementById('inquiryModalContent');
+            if (modal.classList.contains('hidden')) {
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    modalContent.classList.remove('scale-95');
+                    modalContent.classList.add('scale-100');
+                }, 10);
+            } else {
+                modalContent.classList.remove('scale-100');
+                modalContent.classList.add('scale-95');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 200);
+            }
+            updateInquiryModalList();
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // LIGHTBOX HANDLERS
+        function openLightbox(imgUrl, caption) {
+            document.getElementById('lightboxImg').src = imgUrl;
+            document.getElementById('lightboxCaption').innerText = caption;
+            document.getElementById('lightboxModal').classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightboxModal').classList.add('hidden');
+        }
+
+        // WHATSAPP INQUIRY PRE-FILL GENERATOR
+        function handleInquirySubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('custName').value;
+            const notes = document.getElementById('custNotes').value;
+            const phone = "923009202325";
+
+            let itemsText = selectedInquiryItems.length > 0 
+                ? selectedInquiryItems.join(', ') 
+                : "General Menu Inquiry";
+
+            const msg = `Hello Ghousia Fast Food (Hussainabad),\n\nI would like to inquire about an order.\n\nCustomer: ${name}\nItems: ${itemsText}\nNotes: ${notes || 'None'}\n\nPlease confirm availability. Thank you!`;
+
+            const encodedMsg = encodeURIComponent(msg);
+            window.open(`https://wa.me/${phone}?text=${encodedMsg}`, '_blank');
+        }
+
+        // BBQ EMBERS CANVAS ANIMATION LOGIC
+        function initEmbers() {
+            const canvas = document.getElementById('emberCanvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+
+            function resizeCanvas() {
+                canvas.width = canvas.parentElement.clientWidth;
+                canvas.height = canvas.parentElement.clientHeight;
+            }
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+
+            const particles = [];
+            const particleCount = 35;
+
+            for (let i = 0; i < particleCount; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    radius: Math.random() * 2 + 0.8,
+                    color: Math.random() > 0.5 ? '#D32F2F' : '#D4AF37',
+                    speedY: Math.random() * 0.8 + 0.3,
+                    speedX: Math.random() * 0.4 - 0.2,
+                    alpha: Math.random() * 0.7 + 0.3
+                });
+            }
+
+            function animateEmbers() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                particles.forEach(p => {
+                    ctx.save();
+                    ctx.globalAlpha = p.alpha;
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                    ctx.fillStyle = p.color;
+                    ctx.shadowBlur = 8;
+                    ctx.shadowColor = p.color;
+                    ctx.fill();
+                    ctx.restore();
+
+                    p.y -= p.speedY;
+                    p.x += p.speedX;
+
+                    if (p.y < 0) {
+                        p.y = canvas.height + 10;
+                        p.x = Math.random() * canvas.width;
+                    }
+                });
+
+                requestAnimationFrame(animateEmbers);
+            }
+
+            animateEmbers();
+        }
+    </script>
+</body>
+</html>
